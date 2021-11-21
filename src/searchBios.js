@@ -5,7 +5,9 @@ const { default: axios } = require('axios');
 const fetchData = async (searchTerm) => {
   // const response = await axios.get(`http://localhost:3001/people?username=${searchTerm}`); people route
   const response = await axios.get(`http://localhost:3001/username?username=${searchTerm}`);
-
+  if (response.data.Error) {
+    console.log([]);
+  }
   console.log(response.data);
 };
 
