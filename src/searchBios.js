@@ -1,6 +1,5 @@
 import debounce from './debounce.js';
 
-
 const { default: axios } = require('axios');
 
 const fetchData = async (searchTerm) => {
@@ -12,14 +11,10 @@ const fetchData = async (searchTerm) => {
 
 const input = document.querySelector('input');
 
-
 const onInput = (event) => {
   fetchData(event.target.value);
 };
 
 const trigger = input.addEventListener('input', debounce(onInput));
-
-
-
 
 export default trigger;

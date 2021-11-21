@@ -1,8 +1,4 @@
 import './style/styles.css';
-import trigger from './searchBios';
-
-
-
-
+import trigger from './searchBios.js';
 
 trigger();
