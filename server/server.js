@@ -7,9 +7,14 @@ app.use(cors());
 
 app.get('/username', async (req, res) => {
   const endpoint = `https://torre.bio/api/bios/${req.query.username}`;
-
-  const { data } = await axios.get(endpoint);
-  res.send(data || []);
+  let response;
+  try {
+    const { data } = await axios.get(endpoint);
+    response = data;
+  } catch (error) {
+    console.log(error);
+  }
+  res.json(response);
 });
 
 app.listen(3001, () => {
