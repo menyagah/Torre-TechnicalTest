@@ -32,5 +32,20 @@ app.get('/people', async (req, res) => {
   res.json(response);
 });
 
+app.get('/search', async (req, res) => {
+  const endpoint = 'https://search.torre.co/opportunities/_search';
+
+  let response;
+  try {
+    const { data } = await axios.post(endpoint,
+      { 'skill/role': { text: req.query.text, experience: 'potential-to-develop' } });
+
+    response = data;
+  } catch (error) {
+    console.log(error);
+  }
+  res.json(response);
+});
+
 app.listen(3001, () => {
 });
