@@ -31,7 +31,7 @@ let data = {
 };
 
 const renderData = () => {
-    document.getElementById('data').innerText = '';
+  document.getElementById('data').innerText = '';
   data.results.forEach((item) => {
     const div = comp('div', 'card mb-1');
     const cardBody = comp('div', 'card-body');
