@@ -1,4 +1,4 @@
 import './style/styles.css';
-import trigger from './searchBios.js';
+import trigger from './appLogic.js';
 
 trigger();

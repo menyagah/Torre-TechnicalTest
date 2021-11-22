@@ -1,19 +1,15 @@
-import renderData from "./renederData";
+const data = {
+  results: [],
+};
 
-let data = {
-    results: [],
-  };
-  
-  
-  
-  const renderPeople = () => {
-    document.getElementById('data').innerText = '';
-    data.results.forEach((item) => {
-      const div = document.createElement('div');
-      div.classList.add('col-xl-12');
-      div.classList.add('col-sm-18');
-      div.classList.add('mb-3');
-      div.innerHTML = `
+const renderPeople = (data) => {
+  document.getElementById('data').innerText = '';
+  data.results.forEach((item) => {
+    const div = document.createElement('div');
+    div.classList.add('col-xl-12');
+    div.classList.add('col-sm-18');
+    div.classList.add('mb-3');
+    div.innerHTML = `
           <div class="bg-white rounded shadow-sm py-5 px-4"><img src="${item.picture}" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
           <h5 class="mb-0">${item.name}</h5><span class="small text-uppercase text-muted">${item.professionalHeadline}</span><br>
           <span class="small text-uppercase text-muted">amount: ${item.compensations.employee.amount}</span><br>
@@ -29,9 +25,8 @@ let data = {
           </ul>
       </div>
           `;
-      document.getElementById('data').appendChild(div);
-    });
-  };
+    document.getElementById('data').appendChild(div);
+  });
+};
 
-
-  export default renderPeople;
+export default renderPeople;
