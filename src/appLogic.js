@@ -53,7 +53,7 @@ const trigger = btnSearch.addEventListener('click', () => {
   if (buttonClicked === 'job') {
     document.getElementById('data').innerHTML = '<div class="loader-cont"><div class="loader"></div></div>';
     const fetchData = async (searchTerm) => {
-      const response = await axios.get(`http://localhost:3001/search?text=${searchTerm}`);
+      const response = await axios.get(`https://torre-tech-test-back-end.vercel.app/search?text=${searchTerm}`);
       data = response.data;
       renderData(data);
     };
@@ -61,7 +61,7 @@ const trigger = btnSearch.addEventListener('click', () => {
   } else if (buttonClicked === 'bio') {
     document.getElementById('data').innerHTML = '<div class="loader-cont"><div class="loader"></div></div>';
     const fetchData = async (searchTerm) => {
-      const response = await axios.get(`http://localhost:3001/username?username=${searchTerm}`);
+      const response = await axios.get(`https://torre-tech-test-back-end.vercel.app/username?username=${searchTerm}`);
       data = response.data;
       renderBio(data);
     };
@@ -69,7 +69,7 @@ const trigger = btnSearch.addEventListener('click', () => {
   } else {
     document.getElementById('data').innerHTML = '<div class="loader-cont"><div class="loader"></div></div>';
     const fetchData = async (searchTerm) => {
-      const response = await axios.get(`http://localhost:3001/people?username=${searchTerm}`);
+      const response = await axios.get(`https://torre-tech-test-back-end.vercel.app/people?username=${searchTerm}`);
       data = response.data;
       renderPeople(data);
     };
