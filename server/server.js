@@ -12,7 +12,6 @@ app.get('/username', async (req, res) => {
     const { data } = await axios.get(endpoint);
     response = data;
   } catch (error) {
-    console.log(error);
     res.status(500);
   }
   res.json(response);
@@ -28,7 +27,6 @@ app.get('/people', async (req, res) => {
 
     response = data;
   } catch (error) {
-    console.log(error);
     res.status(500);
   }
   res.json(response);
@@ -44,7 +42,6 @@ app.get('/search', async (req, res) => {
 
     response = data;
   } catch (error) {
-    console.log(error);
     res.status(500);
   }
   res.json(response);
