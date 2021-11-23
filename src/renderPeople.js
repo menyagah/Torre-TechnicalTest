@@ -1,7 +1,3 @@
-const data = {
-  results: [],
-};
-
 const renderPeople = (data) => {
   document.getElementById('data').innerText = '';
   data.results.forEach((item) => {

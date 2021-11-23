@@ -1,7 +1,3 @@
-const data = {
-  results: [],
-};
-
 const renderBio = (data) => {
   document.getElementById('data').innerText = '';
 
